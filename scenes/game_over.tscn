@@ -1,0 +1,38 @@
+[gd_scene format=2]
+
+[node name="Panel" type="Panel"]
+margin_left = 226.0
+margin_top = 182.0
+margin_right = 539.0
+margin_bottom = 316.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="Label" parent="."]
+margin_left = 118.75
+margin_top = 32.3
+margin_right = 194.75
+margin_bottom = 46.3
+text = "GAME OVER"
+
+[node name="TextureButton" type="ColorRect" parent="."]
+margin_left = 26.8079
+margin_top = 49.8992
+margin_right = 286.808
+margin_bottom = 117.899
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton"]
+margin_left = 113.274
+margin_top = 29.3025
+margin_right = 153.274
+margin_bottom = 43.3025
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "EXIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}

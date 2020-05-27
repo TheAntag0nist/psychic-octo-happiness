@@ -1,0 +1,153 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/Inventory.gd" type="Script" id=1]
+[ext_resource path="res://scripts/EquipmentSlots.gd" type="Script" id=2]
+[ext_resource path="res://scripts/GridBackPack.gd" type="Script" id=3]
+[ext_resource path="res://tileset/GUI/inventory/path-of-diablo-inventory-stash-screen.png" type="Texture" id=4]
+
+[node name="Inventory" type="Control"]
+visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ground_seller" type="Panel" parent="."]
+show_behind_parent = true
+margin_left = 95.8785
+margin_top = 109.007
+margin_right = 388.879
+margin_bottom = 401.007
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EquipmentSlots" type="Panel" parent="."]
+show_behind_parent = true
+margin_left = 407.879
+margin_top = 30.0065
+margin_right = 721.879
+margin_bottom = 149.007
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MAIN_HAND" type="Panel" parent="EquipmentSlots"]
+show_behind_parent = true
+margin_left = 1.79059
+margin_top = -1.57213
+margin_right = 61.7906
+margin_bottom = 114.428
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HEAD" type="Panel" parent="EquipmentSlots"]
+show_behind_parent = true
+margin_left = 68.0
+margin_right = 123.0
+margin_bottom = 55.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CHEST" type="Panel" parent="EquipmentSlots"]
+show_behind_parent = true
+margin_left = 128.0
+margin_right = 183.0
+margin_bottom = 86.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HANDS" type="Panel" parent="EquipmentSlots"]
+show_behind_parent = true
+margin_left = 187.0
+margin_top = -1.0
+margin_right = 242.0
+margin_bottom = 58.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LEGS" type="Panel" parent="EquipmentSlots"]
+show_behind_parent = true
+margin_left = 187.857
+margin_top = 58.1589
+margin_right = 242.857
+margin_bottom = 117.159
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BELT" type="Panel" parent="EquipmentSlots"]
+show_behind_parent = true
+margin_left = 128.0
+margin_top = 86.0
+margin_right = 183.0
+margin_bottom = 116.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridBackPack" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_left = 422.0
+margin_top = 149.0
+margin_right = 705.0
+margin_bottom = 412.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 78.8785
+margin_top = 24.0065
+margin_right = 725.879
+margin_bottom = 461.007
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="max_money" type="Label" parent="."]
+margin_left = 244.879
+margin_top = 77.0065
+margin_right = 324.879
+margin_bottom = 93.0065
+text = "2 000 000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="my_money" type="Label" parent="."]
+margin_left = 515.878
+margin_top = 421.007
+margin_right = 596.878
+margin_bottom = 437.007
+text = "20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="money" type="Label" parent="."]
+margin_left = 192.449
+margin_top = 49.8639
+margin_right = 290.449
+margin_bottom = 65.8639
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryBase" type="Panel" parent="."]
+show_behind_parent = true
+margin_left = 78.0
+margin_top = 23.0
+margin_right = 724.0
+margin_bottom = 462.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

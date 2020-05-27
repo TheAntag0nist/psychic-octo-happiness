@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scripts/start_scene.gd" type="Script" id=1]
+[ext_resource path="res://tileset/GUI/background/background_1.jpg" type="Texture" id=2]
+[ext_resource path="res://tileset/GUI/background/logo.png" type="Texture" id=3]
+[ext_resource path="res://tileset/GUI/button/button.png" type="Texture" id=4]
+[ext_resource path="res://tileset/GUI/button/button_pressed.png" type="Texture" id=5]
+[ext_resource path="res://tileset/GUI/text_sprites/start_game.png" type="Texture" id=6]
+[ext_resource path="res://tileset/GUI/text_sprites/settings.png" type="Texture" id=7]
+[ext_resource path="res://tileset/GUI/text_sprites/credits.png" type="Texture" id=8]
+[ext_resource path="res://audio/Компьютерная игра.wav" type="AudioStream" id=9]
+[ext_resource path="res://scripts/time.gd" type="Script" id=10]
+[ext_resource path="res://scripts/date.gd" type="Script" id=11]
+
+[node name="menu" type="Node2D"]
+
+[node name="Main" type="VBoxContainer" parent="."]
+margin_right = 800.0
+margin_bottom = 500.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="Main"]
+margin_right = 817.0
+margin_bottom = 516.0
+texture = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="Main/Background"]
+margin_left = -2.0498
+margin_right = -2.0498
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Main/Background/Panel"]
+stream = ExtResource( 9 )
+volume_db = -6.058
+autoplay = true
+
+[node name="Time" type="Label" parent="Main/Background/Panel"]
+margin_left = 20.0
+margin_top = 16.0
+margin_right = 65.0
+margin_bottom = 30.0
+text = "Time:  "
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cur_time" type="Label" parent="Main/Background/Panel/Time"]
+margin_left = 45.3779
+margin_top = 0.630249
+margin_right = 85.3779
+margin_bottom = 14.6302
+text = "00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Date" type="Label" parent="Main/Background/Panel"]
+margin_left = 20.0
+margin_top = 39.7057
+margin_right = 61.4285
+margin_bottom = 53.7057
+text = "Date:"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cur_date" type="Label" parent="Main/Background/Panel/Date"]
+margin_left = 45.7073
+margin_right = 117.707
+margin_bottom = 14.0
+text = "26.03.2020"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Main/Background/Panel"]
+margin_left = 260.0
+margin_top = 150.0
+margin_right = 525.684
+margin_bottom = 223.789
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start_game" type="TextureRect" parent="Main/Background/Panel/TextureButton"]
+margin_left = 12.8444
+margin_top = 12.4279
+margin_right = 232.844
+margin_bottom = 67.4279
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton_1" type="TextureButton" parent="Main/Background/Panel"]
+margin_left = 260.0
+margin_top = 220.0
+margin_right = 530.105
+margin_bottom = 293.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settings" type="TextureRect" parent="Main/Background/Panel/TextureButton_1"]
+margin_left = 20.9
+margin_top = 6.64999
+margin_right = 240.9
+margin_bottom = 61.65
+texture = ExtResource( 7 )
+
+[node name="TextureButton_2" type="TextureButton" parent="Main/Background/Panel"]
+margin_left = 260.0
+margin_top = 290.0
+margin_right = 526.316
+margin_bottom = 355.368
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credit" type="TextureRect" parent="Main/Background/Panel/TextureButton_2"]
+margin_left = 20.9
+margin_top = 6.65002
+margin_right = 240.9
+margin_bottom = 61.65
+texture = ExtResource( 8 )
+
+[node name="Menu" type="VBoxContainer" parent="Main/Background/Panel"]
+margin_left = 86.0
+margin_top = 10.0
+margin_right = 710.004
+margin_bottom = 139.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="Main/Background/Panel/Menu"]
+margin_right = 624.0
+margin_bottom = 125.0
+texture = ExtResource( 3 )
+[connection signal="pressed" from="Main/Background/Panel/TextureButton" to="Main/Background/Panel" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Main/Background/Panel/TextureButton_1" to="Main/Background/Panel" method="_on_TextureButton_1_pressed"]
+[connection signal="pressed" from="Main/Background/Panel/TextureButton_2" to="Main/Background/Panel" method="_on_TextureButton_2_pressed"]

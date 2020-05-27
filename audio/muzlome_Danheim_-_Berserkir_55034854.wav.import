@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/muzlome_Danheim_-_Berserkir_55034854.wav-65513d84f2c091af1142041541f31e15.sample"
+
+[deps]
+
+source_file="res://audio/muzlome_Danheim_-_Berserkir_55034854.wav"
+dest_files=[ "res://.import/muzlome_Danheim_-_Berserkir_55034854.wav-65513d84f2c091af1142041541f31e15.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
