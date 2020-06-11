@@ -5,3 +5,5 @@ This application just student project for learning gamedev. Final version of gam
 		2) More than 50 skills
 		3) Three characters for playing
 		4) Simple story
+
+Last update: 11.06.2020
