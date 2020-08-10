@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/start_scene.gd" type="Script" id=1]
 [ext_resource path="res://tileset/GUI/background/background_1.jpg" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://audio/Компьютерная игра.wav" type="AudioStream" id=9]
 [ext_resource path="res://scripts/time.gd" type="Script" id=10]
 [ext_resource path="res://scripts/date.gd" type="Script" id=11]
+[ext_resource path="res://scripts/sound_off.gd" type="Script" id=12]
+[ext_resource path="res://icons/sound_off.jpg" type="Texture" id=13]
 
 [node name="menu" type="Node2D"]
 
@@ -33,11 +35,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Main/Background/Panel"]
-stream = ExtResource( 9 )
-volume_db = -6.058
-autoplay = true
 
 [node name="Time" type="Label" parent="Main/Background/Panel"]
 margin_left = 20.0
@@ -118,6 +115,9 @@ margin_top = 6.64999
 margin_right = 240.9
 margin_bottom = 61.65
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton_2" type="TextureButton" parent="Main/Background/Panel"]
 margin_left = 260.0
@@ -150,6 +150,22 @@ __meta__ = {
 margin_right = 624.0
 margin_bottom = 125.0
 texture = ExtResource( 3 )
+
+[node name="sound_off" type="TextureButton" parent="Main/Background/Panel"]
+margin_left = 711.0
+margin_top = 15.0
+margin_right = 775.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 13 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Main/Background/Panel/sound_off"]
+stream = ExtResource( 9 )
+volume_db = -6.058
 [connection signal="pressed" from="Main/Background/Panel/TextureButton" to="Main/Background/Panel" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Main/Background/Panel/TextureButton_1" to="Main/Background/Panel" method="_on_TextureButton_1_pressed"]
 [connection signal="pressed" from="Main/Background/Panel/TextureButton_2" to="Main/Background/Panel" method="_on_TextureButton_2_pressed"]
+[connection signal="pressed" from="Main/Background/Panel/sound_off" to="Main/Background/Panel/sound_off" method="_on_sound_off_pressed"]
